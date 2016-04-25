@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of php-cache\array-adapter package.
+ * This file is part of php-cache organization.
  *
  * (c) 2015-2015 Aaron Scherer <aequasi@gmail.com>, Tobias Nyholm <tobias.nyholm@gmail.com>
  *
@@ -11,9 +11,14 @@
 
 namespace Cache\Adapter\PHPArray\Tests;
 
-use Cache\IntegrationTests\HierarchicalCachePoolTest;
+use Cache\Adapter\PHPArray\ArrayCachePool;
 
-class IntegrationHierarchicalTest extends HierarchicalCachePoolTest
+trait CreatePoolTrait
 {
-    use CreatePoolTrait;
+    private $cacheArray = [];
+
+    public function createCachePool()
+    {
+        return new ArrayCachePool(null, $this->cacheArray);
+    }
 }
