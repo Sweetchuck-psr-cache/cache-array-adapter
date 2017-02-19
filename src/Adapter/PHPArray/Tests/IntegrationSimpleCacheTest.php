@@ -11,9 +11,9 @@
 
 namespace Cache\Adapter\PHPArray\Tests;
 
-use Cache\IntegrationTests\CachePoolTest;
+use Cache\IntegrationTests\SimpleCacheTest;
 
-class IntegrationPoolTest extends CachePoolTest
+class IntegrationSimpleCacheTest extends SimpleCacheTest
 {
     use CreatePoolTrait;
 }
