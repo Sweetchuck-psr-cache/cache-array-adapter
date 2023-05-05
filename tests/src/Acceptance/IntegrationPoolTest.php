@@ -12,11 +12,11 @@ declare(strict_types = 1);
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Adapter\PHPArray\Tests;
+namespace Cache\Adapter\PHPArray\Tests\Acceptance;
 
-use Cache\IntegrationTests\HierarchicalCachePoolTest;
+use Cache\IntegrationTests\CachePoolTest;
 
-class IntegrationHierarchicalTest extends HierarchicalCachePoolTest
+class IntegrationPoolTest extends CachePoolTest
 {
     use CreatePoolTrait;
 }
